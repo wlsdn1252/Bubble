@@ -21,9 +21,7 @@
 
     <EditText
         android:id="@+id/loginPageIdEditText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        style="@style/loginPageEdit"
         android:background="@drawable/edittext_round_box"
         android:hint="ID"
         android:inputType="textEmailAddress"
@@ -33,9 +31,7 @@
 
     <EditText
         android:id="@+id/loginPagePasswordEditText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        style="@style/loginPageEdit"
         android:background="@drawable/edittext_round_box"
         android:hint="password"
         android:inputType="textPassword"
@@ -45,12 +41,9 @@
 
     <Button
         android:id="@+id/loginPageLoginButton"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        style="@style/loginPageButton"
         android:text="로그인"
-        android:background="@color/skyblue"
-        android:textColor="@color/black"
+        android:background="@drawable/login_button_style"
         app:layout_constraintEnd_toStartOf="@+id/loginPageSignUpButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,16 +51,46 @@
 
     <Button
         android:id="@+id/loginPageSignUpButton"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        style="@style/loginPageButton"
         android:text="회원가입"
-        android:textColor="@color/black"
-        android:background="@color/green"
+        android:background="@drawable/singin_button_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/loginPageLoginButton"
         app:layout_constraintTop_toBottomOf="@id/loginPagePasswordEditText" />
+
+    <Button
+        android:id="@+id/loginPageKakaoButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="카카오톡으로 로그인"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/kakao_button_style"
+        app:layout_constraintTop_toBottomOf="@id/loginPageLoginButton"
+        app:layout_constraintStart_toStartOf="@id/loginPageLoginButton"
+        app:layout_constraintEnd_toEndOf="@id/loginPageSignUpButton" />
+    <Button
+        android:id="@+id/loginPageGoogleButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="구글로 로그인"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/google_button_style"
+        app:layout_constraintTop_toBottomOf="@id/loginPageKakaoButton"
+        app:layout_constraintStart_toStartOf="@id/loginPageLoginButton"
+        app:layout_constraintEnd_toEndOf="@id/loginPageSignUpButton" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="네이버로 로그인"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/singin_button_style"
+        app:layout_constraintTop_toBottomOf="@id/loginPageGoogleButton"
+        app:layout_constraintStart_toStartOf="@id/loginPageLoginButton"
+        app:layout_constraintEnd_toEndOf="@id/loginPageSignUpButton" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
