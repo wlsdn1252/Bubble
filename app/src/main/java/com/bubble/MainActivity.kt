@@ -17,14 +17,5 @@ class MainActivity : BaseActivity() {
 
         getCustomBar()
         goToCustomProfileImage()
-
-
-
     }
-
-
-
-
-
-
 }
